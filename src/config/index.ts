@@ -6,12 +6,10 @@ const POSTGRESQL_USERNAME: string = process.env?.POSTGRESQL_USERNAME || 'postgre
 const POSTGRESQL_PASSWORD: string = process.env?.POSTGRESQL_PASSWORD || '';
 const POSTGRESQL_DATABASE: string = process.env?.POSTGRESQL_DATABASE || '';
 
-const ADMINS = process.env?.ADMINS || ['502480594']
 const BOT_TOKEN: any = process.env.BOT_TOKEN
 
 export {
     BOT_TOKEN,
-    ADMINS,
     POSTGRESQL_HOST,
     POSTGRESQL_USERNAME,
     POSTGRESQL_PASSWORD,
