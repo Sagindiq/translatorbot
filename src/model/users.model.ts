@@ -14,6 +14,20 @@ const userModel = sequelize.define('users', {
     username: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    role: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: 'user'
+    },
+    displayLanguage: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        defaultValue: 'uz'
+    },
+    toTranslate: {
+        type: DataTypes.STRING,
+        allowNull: true,
     }
 })
 
