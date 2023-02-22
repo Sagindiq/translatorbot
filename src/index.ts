@@ -5,6 +5,7 @@ import modules from "./module";
 import redis from "./utils/redis";
 import sequelize from "./utils/sequelize";
 import { userModel } from './model'
+import cronsJobs from "./cron";
 
 const bot = new Telegraf<Scenes.WizardContext>(BOT_TOKEN)
 
@@ -14,5 +15,6 @@ sequelize.authenticate().then(() => console.log('Database connected')).catch(err
 bot.use(session())
 middlewares(bot)
 modules(bot)
+cronsJobs(bot)
 
 bot.launch().then(() => console.log('Bot started'))

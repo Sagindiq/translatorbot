@@ -1,6 +1,6 @@
-import { Middleware } from 'telegraf'
 import myTelegraf from '../types/wizard.type';
+import hasUser from './hasUser.middleware';
 
-export default function middlewares(bot: myTelegraf) {
-
+export default async function middlewares(bot: myTelegraf) {
+    bot.use(hasUser)
 }
